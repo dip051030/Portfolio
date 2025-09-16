@@ -40,7 +40,7 @@ const About = () => {
               <h4 className="text-lg font-semibold text-gray-900">Currently Learning:</h4>
               <div className="flex flex-wrap gap-2">
                 {['Machine Learning', 'Cloud Computing', 'Mobile Development'].map((tech) => (
-                  <span key={tech} className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
+                  <span key={tech} className="bg-gradient-to-r from-primary-100 to-secondary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium border border-primary-200">
                     {tech}
                   </span>
                 ))}
@@ -53,10 +53,10 @@ const About = () => {
             {stats.map((stat, index) => (
               <div 
                 key={index} 
-                className="bg-gray-50 p-6 rounded-xl text-center card-hover"
+                className="bg-gradient-to-br from-primary-50 to-secondary-50 p-6 rounded-xl text-center card-hover border border-primary-100 shadow-sm"
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">
-                  <stat.icon className="text-blue-600" size={24} />
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-white rounded-lg mb-4 shadow-sm">
+                  <stat.icon className="text-primary-600" size={24} />
                 </div>
                 <div className="text-2xl font-bold text-gray-900 mb-1">{stat.value}</div>
                 <div className="text-gray-600 text-sm">{stat.label}</div>

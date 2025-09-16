@@ -18,10 +18,18 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
   }
 
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-primary-50 to-secondary-50;
+  }
+
+  .gradient-button {
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 transition-all duration-300;
   }
 }

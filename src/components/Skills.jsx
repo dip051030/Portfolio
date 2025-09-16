@@ -1,56 +1,27 @@
 import React from 'react'
+import { Code, Database, Wrench } from 'lucide-react'
 
 const Skills = () => {
   const skillCategories = [
     {
       title: 'Frontend Development',
-      skills: [
-        { name: 'React', level: 90 },
-        { name: 'JavaScript', level: 85 },
-        { name: 'HTML/CSS', level: 95 },
-        { name: 'Tailwind CSS', level: 80 },
-        { name: 'TypeScript', level: 75 }
-      ]
+      icon: Code,
+      skills: ['React', 'JavaScript', 'HTML/CSS', 'Tailwind CSS', 'TypeScript', 'Vue.js']
     },
     {
       title: 'Backend Development',
-      skills: [
-        { name: 'Node.js', level: 80 },
-        { name: 'Python', level: 85 },
-        { name: 'Java', level: 75 },
-        { name: 'Express.js', level: 70 },
-        { name: 'MongoDB', level: 65 }
-      ]
+      icon: Database,
+      skills: ['Node.js', 'Python', 'Java', 'Express.js', 'MongoDB', 'PostgreSQL']
     },
     {
       title: 'Tools & Technologies',
-      skills: [
-        { name: 'Git/GitHub', level: 90 },
-        { name: 'VS Code', level: 95 },
-        { name: 'Docker', level: 60 },
-        { name: 'AWS', level: 55 },
-        { name: 'Figma', level: 70 }
-      ]
+      icon: Wrench,
+      skills: ['Git/GitHub', 'VS Code', 'Docker', 'AWS', 'Figma', 'Linux']
     }
   ]
 
-  const SkillBar = ({ skill }) => (
-    <div className="mb-4">
-      <div className="flex justify-between mb-2">
-        <span className="text-gray-700 font-medium">{skill.name}</span>
-        <span className="text-gray-500 text-sm">{skill.level}%</span>
-      </div>
-      <div className="w-full bg-gray-200 rounded-full h-3">
-        <div 
-          className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all duration-1000 ease-out"
-          style={{ width: `${skill.level}%` }}
-        ></div>
-      </div>
-    </div>
-  )
-
   return (
-    <section id="skills" className="py-20 section-padding bg-gray-50">
+    <section id="skills" className="py-20 section-padding bg-gradient-to-br from-slate-50 to-gray-100">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Skills & Technologies</h2>
@@ -59,13 +30,24 @@ const Skills = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-sm card-hover">
-              <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
-                {category.title}
-              </h3>
-              <div className="space-y-4">
+            <div key={index} className="bg-white p-8 rounded-xl shadow-lg card-hover border border-gray-100">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-100 to-secondary-100 rounded-full mb-4">
+                  <category.icon className="text-primary-600" size={32} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">
+                  {category.title}
+                </h3>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <SkillBar key={skillIndex} skill={skill} />
+                  <div
+                    key={skillIndex}
+                    className="bg-gradient-to-r from-primary-50 to-secondary-50 px-4 py-3 rounded-lg text-center border border-primary-100 hover:border-primary-300 transition-all duration-300 hover:shadow-md"
+                  >
+                    <span className="text-gray-700 font-medium text-sm">{skill}</span>
+                  </div>
                 ))}
               </div>
             </div>
@@ -77,12 +59,12 @@ const Skills = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Also Experienced With</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              'Redux', 'Next.js', 'GraphQL', 'PostgreSQL', 'Firebase', 
-              'Jest', 'Webpack', 'Linux', 'Agile', 'REST APIs'
+              'Redux', 'Next.js', 'GraphQL', 'Firebase', 'Jest',
+              'Webpack', 'Agile', 'REST APIs', 'SASS', 'Material-UI'
             ].map((tech) => (
               <span 
                 key={tech} 
-                className="bg-white px-4 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-medium hover:border-blue-300 transition-colors"
+                className="bg-white px-6 py-3 rounded-full shadow-sm border border-gray-200 text-gray-700 font-medium hover:border-primary-300 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 transition-all duration-300 hover:shadow-md"
               >
                 {tech}
               </span>
