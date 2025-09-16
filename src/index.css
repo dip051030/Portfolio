@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-gray-50 text-gray-900;
+    @apply bg-dark-100 text-primary-900;
   }
 }
 
@@ -18,18 +18,26 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-secondary-500 to-accent-400 bg-clip-text text-transparent;
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+    @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:shadow-secondary-500/20;
   }
 
   .gradient-bg {
-    @apply bg-gradient-to-br from-primary-50 to-secondary-50;
+    @apply bg-gradient-to-br from-dark-200 to-primary-100;
   }
 
   .gradient-button {
-    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 transition-all duration-300;
+    @apply bg-gradient-to-r from-secondary-500 to-secondary-400 hover:from-secondary-400 hover:to-secondary-300 transition-all duration-300 shadow-lg hover:shadow-secondary-500/30;
+  }
+
+  .dark-card {
+    @apply bg-dark-200 border border-dark-300 hover:border-secondary-400/50;
+  }
+
+  .glow-effect {
+    @apply animate-glow;
   }
 }

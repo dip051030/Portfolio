@@ -3,6 +3,15 @@
   <component name="CopilotDiffPersistence">
     <option name="pendingDiffs">
       <map>
+        <entry key="$PROJECT_DIR$/src/index.css">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/index.css" />
+              <option name="originalContent" value="@tailwind base;&#10;@tailwind components;&#10;@tailwind utilities;&#10;&#10;@layer base {&#10;  html {&#10;    scroll-behavior: smooth;&#10;  }&#10;&#10;  body {&#10;    @apply bg-gray-50 text-gray-900;&#10;  }&#10;}&#10;&#10;@layer components {&#10;  .section-padding {&#10;    @apply px-4 md:px-8 lg:px-16;&#10;  }&#10;&#10;  .gradient-text {&#10;    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;&#10;  }&#10;&#10;  .card-hover {&#10;    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;&#10;  }&#10;&#10;  .gradient-bg {&#10;    @apply bg-gradient-to-br from-primary-50 to-secondary-50;&#10;  }&#10;&#10;  .gradient-button {&#10;    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 transition-all duration-300;&#10;  }&#10;}&#10;" />
+              <option name="updatedContent" value="@tailwind base;&#10;@tailwind components;&#10;@tailwind utilities;&#10;&#10;@layer base {&#10;  html {&#10;    scroll-behavior: smooth;&#10;  }&#10;&#10;  body {&#10;    @apply bg-dark-100 text-primary-900;&#10;  }&#10;}&#10;&#10;@layer components {&#10;  .section-padding {&#10;    @apply px-4 md:px-8 lg:px-16;&#10;  }&#10;&#10;  .gradient-text {&#10;    @apply bg-gradient-to-r from-secondary-500 to-accent-400 bg-clip-text text-transparent;&#10;  }&#10;&#10;  .card-hover {&#10;    @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:shadow-secondary-500/20;&#10;  }&#10;&#10;  .gradient-bg {&#10;    @apply bg-gradient-to-br from-dark-200 to-primary-100;&#10;  }&#10;&#10;  .gradient-button {&#10;    @apply bg-gradient-to-r from-secondary-500 to-secondary-400 hover:from-secondary-400 hover:to-secondary-300 transition-all duration-300 shadow-lg hover:shadow-secondary-500/30;&#10;  }&#10;&#10;  .dark-card {&#10;    @apply bg-dark-200 border border-dark-300 hover:border-secondary-400/50;&#10;  }&#10;&#10;  .glow-effect {&#10;    @apply animate-glow;&#10;  }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/tailwind.config.js">
           <value>
             <PendingDiffInfo>
