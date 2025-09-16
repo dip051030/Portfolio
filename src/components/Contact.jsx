@@ -46,7 +46,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 section-padding bg-gray-50">
+    <section id="contact" className="py-20 section-padding bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
@@ -70,14 +70,14 @@ const Contact = () => {
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <info.icon className="text-blue-600" size={24} />
+                  <div className="w-12 h-12 bg-gradient-to-r from-primary-100 to-secondary-100 rounded-lg flex items-center justify-center border border-primary-200">
+                    <info.icon className="text-primary-600" size={24} />
                   </div>
                   <div>
                     <p className="text-gray-500 text-sm">{info.label}</p>
                     <a 
                       href={info.href}
-                      className="text-gray-900 font-medium hover:text-blue-600 transition-colors"
+                      className="text-gray-900 font-medium hover:text-primary-600 transition-colors"
                     >
                       {info.value}
                     </a>
@@ -87,19 +87,19 @@ const Contact = () => {
             </div>
 
             {/* Availability Status */}
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+            <div className="bg-gradient-to-r from-accent-50 to-accent-100 border border-accent-200 rounded-lg p-4">
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <span className="text-green-800 font-medium">Available for freelance work</span>
+                <div className="w-3 h-3 bg-accent-500 rounded-full"></div>
+                <span className="text-accent-800 font-medium">Available for freelance work</span>
               </div>
-              <p className="text-green-700 text-sm mt-1">
+              <p className="text-accent-700 text-sm mt-1">
                 Currently accepting new projects for 2024
               </p>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-xl shadow-sm">
+          <div className="bg-gradient-to-br from-primary-50 to-secondary-50 p-8 rounded-xl shadow-sm border border-primary-100">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
@@ -112,7 +112,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-primary-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors bg-white"
                   placeholder="Your name"
                 />
               </div>
@@ -128,7 +128,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-primary-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors bg-white"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -144,14 +144,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+                  className="w-full px-4 py-3 border border-primary-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none bg-white"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+                className="w-full gradient-button text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
               >
                 <Send size={20} />
                 Send Message

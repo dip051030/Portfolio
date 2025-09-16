@@ -66,22 +66,22 @@ const Projects = () => {
   ]
 
   const ProjectCard = ({ project }) => (
-    <div className="bg-white rounded-xl shadow-sm overflow-hidden card-hover group">
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden card-hover group border border-gray-100">
       {project.featured && (
-        <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-4 py-1 text-xs font-semibold flex items-center gap-1">
+        <div className="bg-gradient-to-r from-accent-400 to-accent-500 text-white px-4 py-1 text-xs font-semibold flex items-center gap-1">
           <Star size={12} />
           Featured Project
         </div>
       )}
       
       {/* Project Image/Icon */}
-      <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 flex items-center justify-center">
+      <div className="bg-gradient-to-br from-primary-50 to-secondary-50 p-8 flex items-center justify-center border-b border-gray-100">
         <div className="text-6xl">{project.image}</div>
       </div>
       
       {/* Project Content */}
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
           {project.title}
         </h3>
         <p className="text-gray-600 mb-4 leading-relaxed">
@@ -93,7 +93,7 @@ const Projects = () => {
           {project.technologies.map((tech) => (
             <span 
               key={tech}
-              className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"
+              className="bg-gradient-to-r from-primary-100 to-secondary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium border border-primary-200"
             >
               {tech}
             </span>
@@ -104,14 +104,14 @@ const Projects = () => {
         <div className="flex gap-3">
           <a 
             href={project.githubUrl}
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+            className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors px-3 py-2 rounded-lg hover:bg-gray-50"
           >
             <Github size={18} />
             <span className="text-sm font-medium">Code</span>
           </a>
           <a 
             href={project.liveUrl}
-            className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
+            className="flex items-center gap-2 text-primary-600 hover:text-primary-700 transition-colors px-3 py-2 rounded-lg hover:bg-primary-50"
           >
             <ExternalLink size={18} />
             <span className="text-sm font-medium">Live Demo</span>
@@ -122,7 +122,7 @@ const Projects = () => {
   )
 
   return (
-    <section id="projects" className="py-20 section-padding bg-white">
+    <section id="projects" className="py-20 section-padding bg-gradient-to-br from-slate-50 to-gray-100">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">My Projects</h2>
@@ -137,7 +137,7 @@ const Projects = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl">
+          <div className="bg-gradient-to-r from-primary-50 to-secondary-50 p-8 rounded-xl border border-primary-100 shadow-sm">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Want to see more?
             </h3>
@@ -146,7 +146,7 @@ const Projects = () => {
             </p>
             <a 
               href="#"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center gap-2 gradient-button text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Github size={20} />
               View GitHub Profile
