@@ -80,7 +80,7 @@ const Hero = () => {
           </div>
 
           {/* Profile Image */}
-          <div className="flex justify-center animate-slide-up relative">
+          <div className="hidden md:flex justify-center animate-slide-up relative">
             <div className="w-80 h-80 bg-gradient-to-br from-secondary-400 to-accent-400 rounded-full flex items-center justify-center shadow-2xl glow-effect">
               <div className="w-72 h-72 bg-dark-200 rounded-full flex items-center justify-center shadow-inner">
                 <div className="text-8xl">👨‍💻</div>

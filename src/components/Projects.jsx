@@ -5,63 +5,43 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'AI Data Analytics Platform',
-      description: 'A comprehensive platform for automated data analysis using machine learning algorithms with real-time insights and predictive modeling capabilities.',
-      image: '📊',
-      technologies: ['Python', 'TensorFlow', 'FastAPI', 'React'],
-      githubUrl: 'https://github.com/dipdarpankandel',
-      liveUrl: '#',
-      featured: true
+      title: 'Derma-Vision',
+      description: 'A Python Flask web application for detecting and analyzing skin conditions from uploaded images. Users can register, log in, upload skin photos, and receive automated analysis reports using machine learning.',
+      image: '🔬',
+      technologies: ['Python', 'Flask', 'Machine Learning', 'Computer Vision', 'Deep Learning', "APIs"],
+      githubUrl: 'https://github.com/dip051030/Derma-Vision',
+      featured: true,
+      isPublic: true
     },
     {
       id: 2,
-      title: 'Intelligent Chat Agent',
-      description: 'An agentic AI system that can understand context, maintain conversations, and execute complex tasks using LangChain and OpenAI API.',
+      title: 'Chatbot-Helper',
+      description: 'An intelligent chatbot designed to guide Nepali citizens through government services, procedures, and resources. Provides clear, accessible support for official documents and public programs.',
       image: '🤖',
-      technologies: ['Python', 'LangChain', 'OpenAI API', 'Streamlit'],
-      githubUrl: 'https://github.com/dipdarpankandel',
-      liveUrl: '#',
-      featured: false
+      technologies: ['Python', 'NLP', 'Chatbot Framework', 'APIs'],
+      githubUrl: 'https://github.com/dip051030/Chatbot-Helper',
+      featured: true,
+      isPublic: true
     },
     {
       id: 3,
-      title: 'Multi-Agent Workflow System',
-      description: 'A collaborative AI system where multiple agents work together to solve complex problems and automate business processes.',
-      image: '🔄',
-      technologies: ['Python', 'AutoGen', 'PostgreSQL', 'Docker'],
-      githubUrl: 'https://github.com/dipdarpankandel',
-      liveUrl: '#',
-      featured: true
+      title: 'ENVOApp',
+      description: 'Your Guide to Environmental Sustainability 🌍. An interactive application designed to empower users with knowledge and tools to make informed, eco-conscious choices in their daily lives.',
+      image: '🌱',
+      technologies: ['Python', 'Data Analysis', 'Interactive UI'],
+      githubUrl: 'https://github.com/dip051030/ENVOApp',
+      featured: false,
+      isPublic: true
     },
     {
       id: 4,
-      title: 'Predictive Analytics Dashboard',
-      description: 'Real-time dashboard for visualizing predictive models and data insights with interactive charts and automated reporting.',
-      image: '📈',
-      technologies: ['Python', 'Plotly', 'Pandas', 'AWS'],
-      githubUrl: 'https://github.com/dipdarpankandel',
-      liveUrl: '#',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Data Pipeline Automation',
-      description: 'Automated ETL pipeline for processing large datasets with real-time monitoring and error handling capabilities.',
-      image: '⚡',
-      technologies: ['Python', 'Apache Spark', 'MongoDB', 'Docker'],
-      githubUrl: 'https://github.com/dipdarpankandel',
-      liveUrl: '#',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Neural Network Trainer',
-      description: 'Custom neural network training platform with hyperparameter optimization and model deployment capabilities.',
-      image: '🧠',
-      technologies: ['Python', 'PyTorch', 'Jupyter', 'MLflow'],
-      githubUrl: 'https://github.com/dipdarpankandel',
-      liveUrl: '#',
-      featured: true
+      title: 'Mental Health Bot',
+      description: 'An AI-powered mental health support chatbot that provides emotional support, resources, and guidance for mental wellness. Features conversational AI and mental health assessment tools.',
+      image: '💚',
+      technologies: ['Python', 'AI/ML', 'APIs', 'Conversational AI'],
+      githubUrl: 'https://github.com/dip051030/Mental_Health_bot',
+      featured: true,
+      isPublic: true
     }
   ]
 
@@ -81,9 +61,16 @@ const Projects = () => {
       
       {/* Project Content */}
       <div className="p-8">
-        <h3 className="text-2xl font-bold text-primary-900 mb-4 group-hover:text-secondary-400 transition-colors leading-tight">
-          {project.title}
-        </h3>
+        <div className="flex items-center gap-2 mb-2">
+          <h3 className="text-2xl font-bold text-primary-900 group-hover:text-secondary-400 transition-colors leading-tight">
+            {project.title}
+          </h3>
+          {project.isPublic && (
+            <span className="text-xs bg-accent-400/20 text-accent-400 px-2 py-1 rounded-full font-medium border border-accent-400/30">
+              Public
+            </span>
+          )}
+        </div>
         <p className="text-primary-600 mb-6 leading-relaxed text-lg">
           {project.description}
         </p>
@@ -100,27 +87,17 @@ const Projects = () => {
           ))}
         </div>
         
-        {/* Project Links */}
-        <div className="flex gap-4">
+        {/* Project Link */}
+        <div className="flex justify-center">
           <a
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`View ${project.title} source code on GitHub`}
-            className="flex items-center gap-2 text-primary-600 hover:text-primary-900 transition-colors px-4 py-3 rounded-lg hover:bg-dark-300 flex-1 justify-center"
+            className="inline-flex items-center gap-3 gradient-button text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl glow-effect"
           >
             <Github size={20} />
-            <span className="font-medium">View Code</span>
-          </a>
-          <a 
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`View ${project.title} live demo`}
-            className="flex items-center gap-2 text-secondary-400 hover:text-secondary-300 transition-colors px-4 py-3 rounded-lg hover:bg-secondary-400/10 flex-1 justify-center"
-          >
-            <ExternalLink size={20} />
-            <span className="font-medium">Live Demo</span>
+            <span>View on GitHub</span>
           </a>
         </div>
       </div>
@@ -133,11 +110,11 @@ const Projects = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary-900 mb-4">My Projects</h2>
           <p className="text-xl text-primary-700 max-w-2xl mx-auto">
-            Data science and AI solutions I've built to solve real-world problems
+            Real-world applications I've built to solve problems in healthcare, government services, and environmental sustainability
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
@@ -150,11 +127,11 @@ const Projects = () => {
               Want to see more?
             </h3>
             <p className="text-primary-600 mb-8 text-lg leading-relaxed max-w-2xl mx-auto">
-              Check out my GitHub profile for more data science and AI projects,
-              including open-source contributions and experimental work.
+              Check out my GitHub profile for more projects focused on AI, data analysis,
+              and solutions that make a real impact in people's lives.
             </p>
             <a 
-              href="https://github.com/dipdarpankandel"
+              href="https://github.com/dip051030"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 gradient-button text-white px-8 py-4 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 glow-effect text-lg"
