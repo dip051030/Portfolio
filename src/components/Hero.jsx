@@ -1,5 +1,5 @@
 import React from 'react'
-import { Download, Github, Linkedin, Mail } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
 
 const Hero = () => {
   return (
@@ -26,13 +26,21 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="gradient-button text-white px-8 py-3 rounded-lg font-medium flex items-center gap-2 shadow-lg hover:shadow-xl glow-effect">
-                <Download size={20} />
-                Download Resume
-              </button>
               <button className="border border-secondary-400 text-secondary-400 px-8 py-3 rounded-lg font-medium hover:border-secondary-300 hover:bg-secondary-400/10 transition-all duration-300">
                 View My Work
               </button>
+              <button className="border border-accent-400 text-accent-400 px-8 py-3 rounded-lg font-medium hover:border-accent-300 hover:bg-accent-400/10 transition-all duration-300">
+                Get In Touch
+              </button>
+              <a
+                href="/resume.pdf"
+                download
+                className="border border-primary-400 text-primary-400 px-8 py-3 rounded-lg font-medium hover:border-primary-300 hover:bg-primary-400/10 transition-all duration-300 flex items-center gap-2 shadow-sm hover:shadow-primary-500/20"
+                aria-label="Download Resume"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" /></svg>
+                Download Resume
+              </a>
             </div>
 
             {/* Social Links */}
