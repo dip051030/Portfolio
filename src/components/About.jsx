@@ -3,10 +3,10 @@ import { GraduationCap, Award, Code, BookOpen } from 'lucide-react'
 
 const About = () => {
   const stats = [
-    { icon: GraduationCap, label: 'Year in College', value: '3rd Year' },
+    { icon: GraduationCap, label: 'Year in College', value: '2nd Year' },
     { icon: Code, label: 'Projects Completed', value: '15+' },
     { icon: Award, label: 'Certifications', value: '5' },
-    { icon: BookOpen, label: 'Technologies Learned', value: '12+' }
+    { icon: BookOpen, label: 'Technologies Learned', value: '7+' }
   ]
 
   return (

@@ -8,24 +8,24 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in">
-            <div className="space-y-4">
-              <p className="text-secondary-500 font-medium text-lg">Hello, I'm</p>
+            <div className="space-y-6">
+              <p className="text-secondary-500 font-medium text-lg tracking-wide">Hello, I'm</p>
               <h1 className="text-5xl md:text-7xl font-bold text-primary-900 leading-tight">
                 Dip <span className="gradient-text">Darpan</span> Kandel
               </h1>
-              <h2 className="text-2xl md:text-3xl text-primary-700 font-medium leading-relaxed">
+              <h2 className="text-2xl md:text-3xl text-primary-700 font-medium leading-relaxed mt-4">
                 Data Analyst & AI Developer
               </h2>
             </div>
             
-            <p className="text-primary-600 text-xl leading-relaxed max-w-lg">
+            <p className="text-primary-600 text-xl leading-relaxed max-w-lg mt-6">
               I'm a passionate developer specializing in data analysis and agentic AI systems.
               I love extracting insights from complex datasets and building intelligent automation
               solutions that solve real-world problems.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <button
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                 className="gradient-button text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl glow-effect text-lg"
@@ -50,7 +50,7 @@ const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-6 pt-6">
+            <div className="flex gap-4 pt-8">
               <a
                 href="https://github.com/dipdarpankandel"
                 target="_blank"
