@@ -29,7 +29,7 @@ const Skills = () => {
             </div>
             <h3 className="text-2xl font-bold text-primary-900 mb-4">Agentic AI & Machine Learning</h3>
             <p className="text-primary-600 leading-relaxed text-lg">
-              Skilled in LangChain, OpenAI API, Hugging Face, PyTorch, TensorFlow, AutoGen for building adaptive, intelligent systems.
+              Skilled in LangChain, API, Hugging Face, PyTorch, TensorFlow, AutoGen for building adaptive, intelligent systems.
             </p>
           </div>
 
@@ -39,7 +39,7 @@ const Skills = () => {
             </div>
             <h3 className="text-2xl font-bold text-primary-900 mb-4">Development & Tools</h3>
             <p className="text-primary-600 leading-relaxed text-lg">
-              React, JavaScript, Git, Docker, AWS, Jupyter—modern tools for robust, scalable development.
+              Git, Jupyter—modern tools for robust, scalable development.
             </p>
           </div>
         </div>
@@ -54,7 +54,7 @@ const Skills = () => {
               <div>
                 <h4 className="text-xl font-semibold text-secondary-400 mb-4">Languages & Libraries</h4>
                 <div className="flex flex-wrap gap-3 justify-center">
-                  {['Python', 'JavaScript', 'SQL', 'Pandas', 'NumPy', 'TensorFlow', 'PyTorch'].map((skill) => (
+                  {['Python', 'JavaScript', 'Pandas', 'NumPy', 'TensorFlow', 'PyTorch'].map((skill) => (
                     <span key={skill} className="bg-gradient-to-r from-secondary-400/20 to-accent-400/20 text-secondary-400 px-4 py-2 rounded-full text-sm font-medium border border-secondary-400/30">
                       {skill}
                     </span>
@@ -64,7 +64,7 @@ const Skills = () => {
               <div>
                 <h4 className="text-xl font-semibold text-accent-400 mb-4">Tools & Platforms</h4>
                 <div className="flex flex-wrap gap-3 justify-center">
-                  {['Jupyter', 'Docker', 'AWS', 'Git', 'React', 'LangChain', 'AutoGen'].map((tool) => (
+                  {['Jupyter', 'Git', 'LangChain', 'AutoGen'].map((tool) => (
                     <span key={tool} className="bg-gradient-to-r from-accent-400/20 to-secondary-400/20 text-accent-400 px-4 py-2 rounded-full text-sm font-medium border border-accent-400/30">
                       {tool}
                     </span>
