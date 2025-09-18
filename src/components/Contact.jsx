@@ -28,19 +28,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'alex.johnson@email.com',
-      href: 'mailto:alex.johnson@email.com'
+      value: 'dipdarpankandel@gmail.com',
+      href: 'mailto:dipdarpankandel@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+977 980-123-4567',
+      href: 'tel:+9779801234567'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'New York, NY',
+      value: 'Kathmandu, Nepal',
       href: '#'
     }
   ]
@@ -50,17 +50,19 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary-900 mb-4">Get In Touch</h2>
-          <p className="text-xl text-primary-700">Let's discuss data science and AI projects</p>
+          <p className="text-xl text-primary-700 max-w-2xl mx-auto">
+            Let's discuss data science and AI projects that can make a real impact
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-primary-900 mb-4">
+              <h3 className="text-2xl font-bold text-primary-900 mb-6">
                 Let's collaborate on AI solutions!
               </h3>
-              <p className="text-primary-600 leading-relaxed mb-8">
+              <p className="text-primary-600 leading-relaxed mb-8 text-lg">
                 I'm always excited to discuss new opportunities in data analysis and agentic AI.
                 Whether you need help with data insights, machine learning models, or intelligent
                 automation systems, I'm here to help bring your ideas to life.
@@ -69,15 +71,15 @@ const Contact = () => {
 
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <div key={index} className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-secondary-400/20 to-accent-400/20 rounded-lg flex items-center justify-center border border-secondary-400/30">
+                <div key={index} className="flex items-center gap-4 p-4 dark-card rounded-lg hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-secondary-400/20 to-accent-400/20 rounded-lg flex items-center justify-center border border-secondary-400/30 flex-shrink-0">
                     <info.icon className="text-secondary-400" size={24} />
                   </div>
                   <div>
-                    <p className="text-primary-500 text-sm">{info.label}</p>
+                    <p className="text-primary-500 text-sm font-medium">{info.label}</p>
                     <a
                       href={info.href}
-                      className="text-primary-900 font-medium hover:text-secondary-400 transition-colors"
+                      className="text-primary-900 font-medium hover:text-secondary-400 transition-colors text-lg"
                     >
                       {info.value}
                     </a>
@@ -87,23 +89,24 @@ const Contact = () => {
             </div>
 
             {/* Availability Status */}
-            <div className="bg-gradient-to-r from-accent-400/20 to-secondary-400/20 border border-accent-400/30 rounded-lg p-4">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-accent-400 rounded-full glow-effect"></div>
-                <span className="text-accent-300 font-medium">Available for AI consulting</span>
+            <div className="bg-gradient-to-r from-accent-400/20 to-secondary-400/20 border border-accent-400/30 rounded-lg p-6">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-3 h-3 bg-accent-400 rounded-full glow-effect animate-pulse"></div>
+                <span className="text-accent-300 font-semibold text-lg">Available for AI consulting</span>
               </div>
-              <p className="text-primary-600 text-sm mt-1">
-                Currently accepting data science and AI projects for 2024
+              <p className="text-primary-600 text-base">
+                Currently accepting data science and AI projects for 2024-2025
               </p>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="dark-card p-8 rounded-xl shadow-lg">
+            <h3 className="text-xl font-bold text-primary-900 mb-6">Send me a message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-primary-800 font-medium mb-2">
-                  Full Name
+                <label htmlFor="name" className="block text-primary-800 font-medium mb-3 text-sm">
+                  Full Name *
                 </label>
                 <input
                   type="text"
@@ -112,14 +115,14 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-dark-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent transition-colors bg-dark-100 text-primary-900"
-                  placeholder="Your name"
+                  className="w-full px-4 py-3 border border-dark-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent transition-colors bg-dark-100 text-primary-900 placeholder-primary-500"
+                  placeholder="Your full name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-primary-800 font-medium mb-2">
-                  Email Address
+                <label htmlFor="email" className="block text-primary-800 font-medium mb-3 text-sm">
+                  Email Address *
                 </label>
                 <input
                   type="email"
@@ -128,14 +131,14 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-dark-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent transition-colors bg-dark-100 text-primary-900"
+                  className="w-full px-4 py-3 border border-dark-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent transition-colors bg-dark-100 text-primary-900 placeholder-primary-500"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-primary-800 font-medium mb-2">
-                  Message
+                <label htmlFor="message" className="block text-primary-800 font-medium mb-3 text-sm">
+                  Message *
                 </label>
                 <textarea
                   id="message"
@@ -144,14 +147,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-dark-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent transition-colors resize-none bg-dark-100 text-primary-900"
+                  className="w-full px-4 py-3 border border-dark-300 rounded-lg focus:ring-2 focus:ring-secondary-500 focus:border-transparent transition-colors resize-none bg-dark-100 text-primary-900 placeholder-primary-500"
                   placeholder="Tell me about your data science or AI project..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full gradient-button text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl glow-effect"
+                className="w-full gradient-button text-white py-4 px-6 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl glow-effect text-lg"
               >
                 <Send size={20} />
                 Send Message

@@ -39,7 +39,7 @@ const About = () => {
             <div className="space-y-3">
               <h4 className="text-lg font-semibold text-primary-900">Currently Learning:</h4>
               <div className="flex flex-wrap gap-2">
-                {['Advanced MLOps', 'Multi-Agent Systems', 'Neural Networks'].map((tech) => (
+                {['Agentic AI Frameworks', 'Multi-Agent Systems', 'ML & DL'].map((tech) => (
                   <span key={tech} className="bg-gradient-to-r from-secondary-400/20 to-accent-400/20 text-secondary-400 px-4 py-2 rounded-full text-sm font-medium border border-secondary-400/30">
                     {tech}
                   </span>
